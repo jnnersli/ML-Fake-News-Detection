@@ -16,7 +16,7 @@ testingD = pd.read_csv("test.tsv", header=None, sep="\t", names=[
 
 df = pd.concat([trainingD, testingD])
 df = df.dropna()
-passive_aggressive = PassiveAggressiveClassifier(max_iter=500, verbose=True)
+passive_aggressive = PassiveAggressiveClassifier(max_iter=500)
 
 x_train, x_test, y_train, y_test = train_test_split(df["Statement"], df['Label'], test_size=0.2)
 
